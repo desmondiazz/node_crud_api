@@ -91,6 +91,8 @@ exports.deleteBook = async(req,res,nex)=>{
         if(!book){
             return res.status(400).json(createError(400,'Book not found'));
         }
+        
+        book['updatedAt'] = moment().valueOf();
         book['status'] = 0;
         await book.save();
         res.json({result:'Success.'})
