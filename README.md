@@ -13,6 +13,12 @@ APIS:
 
 ## Using the api
 
+Install packages
+
+```sh
+npm install
+```
+
 Run tests
 
 ```sh
